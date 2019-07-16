@@ -8,6 +8,9 @@
             ],
             "c/helloWorld": [
                 "helloWorld/helloWorld.js"
+            ],
+            "c/recordFormDynamicContact": [
+                "recordFormDynamicContact/recordFormDynamicContact.js"
             ]
         }
     },
