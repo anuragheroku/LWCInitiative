@@ -2,7 +2,14 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {}
+        "paths": {
+            "c/checkboxGroupBasic": [
+                "checkboxGroupBasic/checkboxGroupBasic.js"
+            ],
+            "c/helloWorld": [
+                "helloWorld/helloWorld.js"
+            ]
+        }
     },
     "include": [
         "**/*",
