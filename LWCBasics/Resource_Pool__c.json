@@ -1,0 +1,30 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Resource_Pool__c",
+                "referenceId": "Resource_Pool__cRef1"
+            },
+            "Name": "Rahul Gupta",
+            "isAvailable__c": false
+        },
+        {
+            "attributes": {
+                "type": "Resource_Pool__c",
+                "referenceId": "Resource_Pool__cRef2"
+            },
+            "Name": "Mohit Shetty",
+            "isAvailable__c": false,
+            "Type__c": "Experienced"
+        },
+        {
+            "attributes": {
+                "type": "Resource_Pool__c",
+                "referenceId": "Resource_Pool__cRef3"
+            },
+            "Name": "Indrajeet Kushwaha",
+            "isAvailable__c": false,
+            "Type__c": "Intermediate"
+        }
+    ]
+}
