@@ -11,6 +11,9 @@
             ],
             "c/recordFormDynamicContact": [
                 "recordFormDynamicContact/recordFormDynamicContact.js"
+            ],
+            "c/resourcePoolBasic": [
+                "resourcePoolBasic/resourcePoolBasic.js"
             ]
         }
     },
