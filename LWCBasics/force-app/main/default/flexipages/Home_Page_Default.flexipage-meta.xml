@@ -35,6 +35,9 @@
             <componentName>home:assistant</componentName>
         </componentInstances>
         <componentInstances>
+            <componentName>getData</componentName>
+        </componentInstances>
+        <componentInstances>
             <componentName>checkboxGroupBasic</componentName>
         </componentInstances>
         <componentInstances>
