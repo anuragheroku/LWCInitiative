@@ -6,6 +6,9 @@
             "c/checkboxGroupBasic": [
                 "checkboxGroupBasic/checkboxGroupBasic.js"
             ],
+            "c/getData": [
+                "getData/getData.js"
+            ],
             "c/helloWorld": [
                 "helloWorld/helloWorld.js"
             ],
@@ -14,9 +17,6 @@
             ],
             "c/resourcePoolBasic": [
                 "resourcePoolBasic/resourcePoolBasic.js"
-            ],
-            "c/getData": [
-                "getData/getData.js"
             ]
         }
     },

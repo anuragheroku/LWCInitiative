@@ -12,8 +12,8 @@ const actions = [
 const columns = [
     { label: 'Name', fieldName: 'Name', type: 'text' },
     { label: 'Type', fieldName: 'Type__c', type: 'text' },
-    { label: 'Prospective Account', fieldName: 'Account__r.Name', type: 'text' },
-    { label: 'Opprtunity', fieldName: 'Opportunity__r.Name', type: 'text' },
+    { label: 'Prospective Account', fieldName: 'Account__c', type: 'text' },
+    { label: 'Opprtunity', fieldName: 'Opportunity__c', type: 'text' },
     {
         type: 'action',
         typeAttributes: { rowActions: actions },
