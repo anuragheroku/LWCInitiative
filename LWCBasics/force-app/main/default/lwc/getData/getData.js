@@ -1,3 +1,5 @@
+/* eslint-disable vars-on-top */
+/* eslint-disable no-console */
 import { LightningElement, wire, track, api } from 'lwc';
 //import { getListUi } from 'lightning/uiListApi';
 //import ResourcePool_obj from '@salesforce/schema/Resource_Pool__c';
@@ -25,7 +27,6 @@ const columns = [
 
 export default class Example extends LightningElement {
     @track columns = columns;
-    @track resources;
     @wire(getAllResources)
     resources;
     @api recordId;
@@ -65,7 +66,6 @@ updateMe(row)
    }
 
     fields.Opportunity__c=this.recordId;
-    fields.isAvailable__c = true;
     
     console.log('Below is prepared fields object');
     console.log(JSON.stringify(fields));
@@ -77,9 +77,8 @@ updateMe(row)
                             title: 'Success',
                             message: 'Record updated',
                             variant: 'success'
-                        })                        
+                        })
                     );
-                   return refreshApex(this.resources);
                     
                 })
                 .catch(error => {
@@ -93,4 +92,6 @@ updateMe(row)
                 });
 
 }
-}
+
+
+        }
