@@ -107,7 +107,7 @@
             <componentName>flexipage:tabset</componentName>
         </componentInstances>
         <componentInstances>
-            <componentName>resourcePoolBasic</componentName>
+            <componentName>getData</componentName>
             <visibilityRule>
                 <criteria>
                     <leftValue>{!Record.StageName}</leftValue>

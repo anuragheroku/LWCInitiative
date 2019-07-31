@@ -178,6 +178,9 @@
     </relatedContent>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>isAvailable__c</fields>
+        <fields>Type__c</fields>
+        <fields>Account__c</fields>
         <relatedList>Resource_Pool__c.Opportunity__c</relatedList>
     </relatedLists>
     <relatedLists>
