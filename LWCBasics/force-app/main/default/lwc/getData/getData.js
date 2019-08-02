@@ -4,6 +4,10 @@ import { LightningElement, wire, track, api } from 'lwc';
 import { updateRecord } from 'lightning/uiRecordApi';
 import { refreshApex } from '@salesforce/apex';
 import getAllResources from '@salesforce/apex/getResourceList.getAllResources';
+import CONTACT_OBJECT from '@salesforce/schema/Contact';
+import { createRecord } from 'lightning/uiRecordApi';
+import NAME_FIELD from '@salesforce/schema/Contact.LastName';
+//import NAME_FIELD from '@salesforce/schema/Contact.LastName';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 
@@ -44,12 +48,41 @@ handleRowAction(event) {
             this.showRowDetails(row);
             break;
         case 'assign':
-        this.updateMe(row);
+        this.createContact(row);
         break;
         default:
     }
 }
-
+//contact insert
+createContact(row){
+    const fields = {};
+    for(var property in row) {
+        if(property == 'Name'){
+            fields[NAME_FIELD.fieldApiName]=row[property];
+        }
+  }    
+    const recordInput1 = { apiName: CONTACT_OBJECT.objectApiName, fields };
+    createRecord(recordInput1)
+        .then ( contact =>{
+            this.dispatchEvent(
+                new ShowToastEvent({
+                    title: 'Success',
+                    message: 'Contact created',
+                    variant: 'success',
+                }),                
+            );
+            this.updateMe(row);
+        })
+        .catch(error => {
+            this.dispatchEvent(
+                new ShowToastEvent({
+                    title: 'Error creating record',
+                    message: error.body.message,
+                    variant: 'error',
+                }),
+            );            
+        });
+    }
 updateMe(row)
 {
 
@@ -64,7 +97,7 @@ updateMe(row)
 
    }
 
-    fields.Opportunity__c=this.recordId;
+    //fields.Opportunity__c=this.recordId;
     fields.isAvailable__c = true;
     
     console.log('Below is prepared fields object');
@@ -75,7 +108,7 @@ updateMe(row)
                     this.dispatchEvent(
                         new ShowToastEvent({
                             title: 'Success',
-                            message: 'Record updated',
+                            message: 'Resource updated',
                             variant: 'success'
                         })                        
                     );
