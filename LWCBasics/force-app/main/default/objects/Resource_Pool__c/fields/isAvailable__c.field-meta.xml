@@ -4,7 +4,7 @@
     <defaultValue>false</defaultValue>
     <description>If Resource is Available of Assigned</description>
     <externalId>false</externalId>
-    <label>Assigned</label>
+    <label>Available</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>
 </CustomField>

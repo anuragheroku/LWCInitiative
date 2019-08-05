@@ -4,9 +4,10 @@ import { LightningElement, wire, track, api } from 'lwc';
 import { updateRecord } from 'lightning/uiRecordApi';
 import { refreshApex } from '@salesforce/apex';
 import getAllResources from '@salesforce/apex/getResourceList.getAllResources';
-import CONTACT_OBJECT from '@salesforce/schema/Contact';
-import { createRecord } from 'lightning/uiRecordApi';
-import NAME_FIELD from '@salesforce/schema/Contact.LastName';
+import { NavigationMixin } from 'lightning/navigation';
+//import CONTACT_OBJECT from '@salesforce/schema/Contact';
+//import { createRecord } from 'lightning/uiRecordApi';
+//import NAME_FIELD from '@salesforce/schema/Contact.LastName';
 //import NAME_FIELD from '@salesforce/schema/Contact.LastName';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
@@ -27,7 +28,7 @@ const columns = [
     },
 ];
 
-export default class Example extends LightningElement {
+export default class Example extends NavigationMixin(LightningElement) {
     @track columns = columns;
     @track resources;
     @wire(getAllResources)
@@ -48,12 +49,23 @@ handleRowAction(event) {
             this.showRowDetails(row);
             break;
         case 'assign':
-        this.createContact(row);
+        this.updateResource(row);
         break;
         default:
     }
 }
-//contact insert
+showRowDetails(row){
+    console.log('rahul:'+row.Id);
+    this[NavigationMixin.Navigate]({
+        type: 'standard__recordPage',
+        attributes: {
+            recordId: row.Id,
+            objectApiName: 'Resource_Pool__c',
+            actionName: 'view'
+        }
+    });
+}
+/*contact insert
 createContact(row){
     const fields = {};
     for(var property in row) {
@@ -82,8 +94,10 @@ createContact(row){
                 }),
             );            
         });
-    }
-updateMe(row)
+}*/
+
+//update resource
+updateResource(row)
 {
 
     console.log('Getting ROW 8');
@@ -97,7 +111,7 @@ updateMe(row)
 
    }
 
-    //fields.Opportunity__c=this.recordId;
+    fields.Opportunity__c=this.recordId;
     fields.isAvailable__c = true;
     
     console.log('Below is prepared fields object');
@@ -125,5 +139,5 @@ updateMe(row)
                     );
                 });
 
-}
+    }
 }

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department__c</fullName>
+    <externalId>false</externalId>
+    <label>Department</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EAS Salesforce</fullName>
+                <default>false</default>
+                <label>EAS Salesforce</label>
+            </value>
+            <value>
+                <fullName>EAS Salesforce Consulting</fullName>
+                <default>false</default>
+                <label>EAS Salesforce Consulting</label>
+            </value>
+            <value>
+                <fullName>EAS Salesforce Mulesoft</fullName>
+                <default>false</default>
+                <label>EAS Salesforce Mulesoft</label>
+            </value>
+            <value>
+                <fullName>EAS Salesforce Marketing</fullName>
+                <default>false</default>
+                <label>EAS Salesforce Marketing</label>
+            </value>
+            <value>
+                <fullName>EAS SF Operational Excellence</fullName>
+                <default>false</default>
+                <label>EAS SF Operational Excellence</label>
+            </value>
+            <value>
+                <fullName>EAS SaaSfocus</fullName>
+                <default>false</default>
+                <label>EAS SaaSfocus</label>
+            </value>
+            <value>
+                <fullName>EAS Salesforce PMG</fullName>
+                <default>false</default>
+                <label>EAS Salesforce PMG</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
