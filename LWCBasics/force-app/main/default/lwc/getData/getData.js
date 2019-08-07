@@ -20,8 +20,9 @@ const actions = [
 
 const columns = [
     { label: 'Name', fieldName: 'Name', type: 'text' },
-    { label: 'Type', fieldName: 'Type__c', type: 'text' },
-    { label: 'isAvailable', fieldName: 'isAvailable__c', type: 'checkbox' },
+    { label: 'Designation', fieldName: 'Designation__c', type: 'text' },
+    { label: 'Experience (Months)', fieldName: 'Experience__c', type: 'text' },
+    { label: 'Geography', fieldName: 'Geography__c', type: 'text' },
     {
         type: 'action',
         typeAttributes: { rowActions: actions },
