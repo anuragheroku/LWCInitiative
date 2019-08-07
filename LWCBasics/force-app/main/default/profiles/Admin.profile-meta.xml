@@ -46,10 +46,6 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <tabVisibilities>
-        <tab>GetData</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>Resource_Pool__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
