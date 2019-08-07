@@ -34,10 +34,6 @@
         <layout>Resource_Pool__c-Resource Pool Layout</layout>
     </layoutAssignments>
     <tabVisibilities>
-        <tab>GetData</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>Resource_Pool__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
